@@ -1,19 +1,30 @@
 
 import java.io.Serializable;
 
-public class Objeto implements Serializable{
+public class Objeto implements Serializable {
+	private static final long serialVersionUID = 8631675912275300021L;
 
-    String nome, extensao, data, informacao;
-    Integer tamanho;
+    String nome, extensao, caminho;
     
-    public String getInformacao() {
-        return informacao;
+   public Objeto(){        
+    }
+   
+   public Objeto(String nome, String ext, String cmn){
+        super();
+        this.extensao = ext;
+        this.nome = nome;
+        this.caminho = cmn;
     }
 
-    public void setInformacao(String informacao) {
-        this.informacao = informacao;
+    public String getCaminho() {
+        return caminho;
     }
 
+    public void setCaminho(String caminho) {
+        this.caminho = caminho;
+    }
+
+   
     public String getNome() {
         return nome;
     }
@@ -28,29 +39,5 @@ public class Objeto implements Serializable{
 
     public void setExtensao(String extensao) {
         this.extensao = extensao;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
-
-    public Integer getTamanho() {
-        return tamanho;
-    }
-
-    public void setTamanho(Integer tamanho) {
-        this.tamanho = tamanho;
-    }
-    
-    public Objeto(){
-        this.data = "";
-        this.extensao = "";
-        this.informacao = "";
-        this.nome = "";
-        this.tamanho = null;
     }
 }
